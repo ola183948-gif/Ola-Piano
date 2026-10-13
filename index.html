@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola Piano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎹❤️ Ola Piano ❤️😊</h1>
+        <p>Click the keys and enjoy playing music!</p>
+
+        <div class="piano-container">
+
+            <div class="piano" id="piano">
+
+                <!-- White keys -->
+                <button class="key white" data-note="C4" data-freq="261.63">C<br>A</button>
+                <button class="key white" data-note="D4" data-freq="293.66">D<br>S</button>
+                <button class="key white" data-note="E4" data-freq="329.63">E<br>D</button>
+                <button class="key white" data-note="F4" data-freq="349.23">F<br>F</button>
+                <button class="key white" data-note="G4" data-freq="392.00">G<br>G</button>
+                <button class="key white" data-note="A4" data-freq="440.00">A<br>H</button>
+                <button class="key white" data-note="B4" data-freq="493.88">B<br>J</button>
+                <button class="key white" data-note="C5" data-freq="523.25">C<br>K</button>
+
+                <!-- Black keys -->
+                <button class="key black b1" data-note="C#4" data-freq="277.18">C#</button>
+                <button class="key black b2" data-note="D#4" data-freq="311.13">D#</button>
+                <button class="key black b3" data-note="F#4" data-freq="369.99">F#</button>
+                <button class="key black b4" data-note="G#4" data-freq="415.30">G#</button>
+                <button class="key black b5" data-note="A#4" data-freq="466.16">A#</button>
+
+            </div>
+
+            <div id="noteLabel">Press a piano key to start!</div>
+
+            <div class="controls">
+                <button class="control" id="playTune">
+                    ▶ Play Demo Melody
+                </button>
+
+                <button class="control" id="stopTune">
+                    ■ Stop Melody
+                </button>
+            </div>
+
+        </div>
+
+        <p>
+            Use your mouse or touchscreen, or press A, S, D, F, G, H, J, K.
+        </p>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

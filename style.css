@@ -1,0 +1,149 @@
+ * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        p {
+            color: #d0d8e8;
+        }
+
+        .piano-container {
+            margin-top: 30px;
+            padding: 25px;
+            background: #202638;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px #0008;
+        }
+
+        .piano {
+            display: flex;
+            position: relative;
+            direction: ltr;
+            height: 280px;
+            user-select: none;
+            touch-action: manipulation;
+        }
+
+        .key {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 0 0 8px 8px;
+            transition: background 0.08s, transform 0.08s;
+        }
+
+        .white {
+            flex: 1;
+            min-width: 0;
+            height: 100%;
+            color: #222;
+            background: linear-gradient(white, #ddd);
+            border: 1px solid #999;
+            box-shadow: inset 0 -5px 0 #bbb;
+        }
+
+        .white.active {
+            background: #8fc5ff;
+            transform: translateY(3px);
+        }
+
+        .black {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            width: 8.5%;
+            height: 62%;
+            color: white;
+            background: linear-gradient(#444, #080808);
+            border: 1px solid #000;
+            box-shadow: 0 5px 8px #0007;
+        }
+
+        .black.active {
+            background: #2878c8;
+            transform: translateY(3px);
+        }
+
+        /* Position black keys */
+        .b1 { left: 8.1%; }
+        .b2 { left: 20.6%; }
+        .b3 { left: 45.6%; }
+        .b4 { left: 58.1%; }
+        .b5 { left: 70.6%; }
+
+        .controls {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        button.control {
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #61a5ff;
+            color: #101a2b;
+        }
+
+        button.control:hover {
+            background: #90c1ff;
+        }
+
+        #noteLabel {
+            margin-top: 18px;
+            color: #8fc5ff;
+            font-size: 18px;
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 27px;
+            }
+
+            .piano-container {
+                padding: 12px;
+            }
+
+            .piano {
+                height: 210px;
+            }
+
+            .key {
+                font-size: 10px;
+                padding-bottom: 10px;
+            }
+
+            .black {
+                width: 8.5%;
+            }
+        }
